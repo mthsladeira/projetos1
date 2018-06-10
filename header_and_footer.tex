@@ -1,0 +1,40 @@
+\renewcommand{\footrulewidth}{0.4pt}%add line above footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{
+	\vfill
+    \includegraphics[width=0.25\textwidth]{cea.pdf}
+    \vfill
+}
+\chead{
+    \vfill
+    \textsf{\textbf{\footnotesize 
+        Centro de Estudos Aeronáuticos UFMG \\
+        Curso de Engenharia Aeroespacial \\
+        }
+        {\scriptsize 
+        Av. Antônio Carlos, 6627 – Pampulha – 31270-901 \\
+        Belo Horizonte – Minas Gerais \\[-1.5\baselineskip]
+        }
+    }
+}
+\rhead{
+\vfill
+\includegraphics[width=0.25\textwidth,height=1.8cm,keepaspectratio]{ufmg_logo.pdf}
+%\vspace{3pt}
+}
+
+\lfoot{Bernardo, Geovana, Laura, Matheus}
+\cfoot{\thepage\ de \pageref{LastPage}}
+\rfoot{\thetitle}
+
+\fancypagestyle{plain}{%
+   \pagestyle{fancy}
+}
+
+%\fancypagestyle{empty}{
+%	\pagestyle{fancy}
+ %   \vfill
+   % THIS PAGE LEFT BLANK
+  %  \vfill
+%}

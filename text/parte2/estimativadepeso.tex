@@ -1,0 +1,676 @@
+\chapter{Estimativa de Peso}
+
+\section{Estimativa inicial do peso máximo de decolagem (MTOW)}
+\label{MTOW_inicial}
+	O peso máximo de decolagem da aeronave foi estimado conforme proposto por Gudmundsson
+  \cite{gudmundsson}.
+  No método proposto, o MTOW é estimado com base em relações históricas de pesos de aeronaves semelhantes da mesma categoria, visto que este método é utilizado quando MTOW da aeronave projetada não é conhecido anteriormente.
+
+	Sabe-se que, ao utilizar este método, o projetista deve assegurar que os dados históricos utilizados são de aeronaves da mesma classe.
+  Portanto, foram utilizados os dados provenientes das regressões das aeronaves apresentadas na tabela comparativa, respeitando os dados provenientes de aeronaves com mesmos tipos de sistema propulsivo.
+  Este método normalmente superestima ou subestima o peso máximo de decolagem, mas serve como um bom valor inicial para o projeto \cite{gudmundsson}.
+	Ele consiste em estimar uma razão do peso de combustível e a razão de peso vazio da aeronave conforme segue:
+
+  \begin{equation*}
+    W_f = \left( \frac{W_f}{W_0} \right) W_0
+  \end{equation*}
+
+  \begin{equation*}
+    W_e = \left( \frac{W_e}{W_0} \right) W_0
+  \end{equation*}
+
+  \begin{description}
+    \item [$W_f$ =] Peso de combustível médio
+    \item [$W_0$ =] Peso máximo de decolagem para aeronaves semelhantes e da mesma categoria (MTOW)
+    \item [$W_e$ =] Peso vazio médio das aeronaves semelhantes
+  \end{description}
+
+  Com essas razões estabelecidas, tem-se a seguinte expressão para a estimativa do MTOW:
+
+  \begin{equation*}
+    W_0 =
+    \left( \frac{W_e}{W_0} \right) W_0
+    +
+    W_c
+    +
+    \left( \frac{W_f}{W_0} \right) W_0
+    +
+    W_p
+  \end{equation*}
+
+  Reescrevendo:
+
+  \begin{equation}
+    W_0 =
+    \frac
+      {W_c + W_f}
+      {\left[
+        1 -
+        \left( \frac{W_e}{W_0} \right) -
+        \left( \frac{W_f}{W_0} \right)
+      \right]}
+  \end{equation}
+
+  Portanto, essa metodologia consistiu em:
+
+  \begin{enumerate}
+    \item Estabelecer a carga paga desejada, $W_p$, e o peso da tripulação $W_c$ da aeronave;
+    \item Determinar os valores históricos de aeronaves semelhantes para estabelecer as razões de combustível e de peso vazio;
+    \item Calcular o MTOW conforme a equação apresentada.
+  \end{enumerate}
+
+
+\section{Métodos estatísticos para a estimativa dos pesos dos componentes e da aeronave}
+
+  Os métodos estatísticos para a estimativa dos pesos da aeronave são baseados em dados históricos de aeronaves existentes.
+  Isto é, se o peso, por exemplo, da estrutura da asa é conhecido para uma população de aeronaves que se encaixam em uma classe específica, é possível determinar relações baseadas em parâmetros geométricos da asa, como a área da asa, a razão de aspecto, bem como em fatores de carga.
+  Então, pode-se utilizar as relações estatísticas para estimar os pesos dos componentes e então o peso total da aeronave.
+
+  Essas relações estatísticas normalmente requerem que alguns parâmetros sejam estabelecidos previamente, portanto, os parâmetros necessários foram calculados e estimados e estão apresentados na tabela na página \pageref{tbl:estimativasPeso}.
+
+  As equações seguintes foram propostas por Raymer e por Nicolai.
+	Portanto, os pesos dos componentes foram calculados seguindo ambas as metodologias, e os resultados obtidos serão apresentados em sequência.
+
+  \subsection{Peso da asa ($W_W$)}
+
+    Raymer:
+    \begin{equation*}
+      W_W =
+        0,036 \cdot
+        S_W^{0,758} \cdot
+        W_{FW}^{0,0035}
+        \left(
+          \frac
+          {{AR}_W}
+          {\cos^2\Lambda_{C/4}}
+        \right)^{0,6}
+        q^{0,006} \cdot
+        \lambda^{0,04}
+        \left(
+          \frac
+          {100 \cdot t/c}
+          {\cos \Lambda_{C/4}}
+        \right)^{-0,3}
+        \left(
+          n_Z W_O
+        \right)^{0,49}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_W =
+        96,948
+        \left[
+          \left( \frac
+            {n_Z W_O}
+            {10^5}
+          \right) ^ {0,65}
+          \left( \frac
+            {{AR}_W}
+            {\cos^2\Lambda_{C/4}}
+          \right) ^ {0,57}
+          \left( \frac
+            {S_W}
+            {100}
+          \right) ^ {0,61}
+          \left( \frac
+            {1 + \lambda}
+            {2 \cdot t/c}
+          \right) ^ {0,36}
+          \sqrt{1 + \frac{V_H}{500}}
+        \right] ^ {0,993}
+    \end{equation*}
+		\\
+
+  \subsection{Peso da empenagem horizontal ($W_{HT}$)}
+
+    Raymer:
+    \begin{equation*}
+      W_{HT} = 0,016
+        \left(
+          n_Z W_O
+        \right) ^ {0,414} \cdot
+        q^{0,168} \cdot
+        S_{HT}^{0,896}
+        \left( \frac
+          {100 \cdot t/c}
+          {\cos \Lambda_{HT}}
+        \right) ^ {-0,12}
+        \left( \frac
+          {{AR}_{HT}}
+          {\cos^2 \Lambda_{HT}}
+        \right) ^ {-0,12}
+        \lambda_{HT}^{-0,02}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_{HT} = 127 \left[
+          \left( \frac
+            {n_Z W_O}
+            {10^5}
+          \right) ^ {0,87}
+          \left( \frac
+            {S_{HT}}
+            {100}
+          \right) ^ {1,2}
+          \left( \frac
+            {l_{HT}}
+            {10}
+          \right) ^ {0,483}
+          \sqrt{ \frac
+            {b_{HT}}
+            {t_{HT_{\max}}}
+          }
+        \right] ^ {0,458}
+    \end{equation*}
+		\\
+
+  \subsection{Peso da empenagem vertical ($W_{VT}$)}
+
+    Raymer:
+    \begin{equation*}
+      W_{VT} = 0,073
+        \left(
+          1 + 0,2 F_{tail}
+        \right)
+        \left(
+          n_Z W_O
+        \right) ^ {0,376}
+        q^{0,122} \cdot
+        S_{VT}^{0,873}
+        \left( \frac
+          {100 \cdot t/c}
+          {\cos \Lambda_{VT}}
+        \right) ^ {-0,49}
+        \left( \frac
+          {{AR}_{VT}}
+          {\cos ^2 \Lambda_{VT}}
+        \right) ^ {0,357}
+        \lambda_{VT}^{0,039}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_{VT} = 98,5 \left[
+          \left( \frac
+            {n_Z W_O}
+            {10^5}
+          \right) ^ {0,87}
+          \left( \frac
+            {S_{VT}}
+            {100}
+          \right) ^ {1,2}
+          \sqrt{ \frac
+            {b_{VT}}
+            {t_{VT_{\max}}}
+          }
+        \right]
+    \end{equation*}
+		\\
+
+  \subsection{Peso da fuselagem ($W_{FUS}$)}
+
+    Raymer:
+    \begin{equation*}
+      W_{FUS} = 0,052 \cdot
+        S_{FUS}^{1,086}
+        \left(
+          n_Z W_O
+        \right) ^ {0,177}
+        l_{HT}^{-0,051}
+        \left( \frac
+          {l_FS}
+          {d_FS}
+        \right) ^ {-0,072}
+        q^{0,241}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_{FUS} = 200 \left[
+        \left( \frac
+          {n_Z W_O}
+          {10^5}
+        \right) ^ {0,286}
+        \left( \frac
+          {l_F}
+          {10}
+        \right) ^ {0,857}
+        \left( \frac
+          {w_F + d_F}
+          {10}
+        \right)
+        \left( \frac
+          {V_H}
+          {100}
+        \right) ^ {0,338}
+      \right] ^ {1,1}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do trem de pouso principal {$W_{MLG}$}}
+
+    Raymer:
+    \begin{equation*}
+      W_{MLG} = 0,095 \left(
+        n_l W_l
+      \right) ^{0,768}
+      \left(
+        L_m / 12
+      \right) ^{0,409}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_{MLG} = 0,054 \left(
+        n_l W_l
+      \right) ^{0,684}
+      \left(
+        L_m / 12
+      \right) ^{0,601}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do trem de pouso do nariz ($W_{NLG}$)}
+
+    Raymer:
+    \begin{equation*}
+      W_{NLG} = 0,125 \left(
+        n_l W_l
+      \right) ^{0,566}
+      \left(
+        L_m / 12
+      \right) ^{0,845}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema de propulsão instalado ($W_{EI}$)}
+
+    Raymer:
+    \begin{equation*}
+      W_{EI} = 2,575 \cdot
+        W_{ENG}^{0,922} \cdot
+        N_{ENG}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+      W_{EI} = 2,575 \cdot
+        W_{ENG}^{0,922} \cdot
+        N_{ENG}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema de combustão ($W_{FS}$)}
+
+    Raymer:
+    \begin{equation*}
+    	W_{FS} = 2,49 \cdot
+				Q_{tot}^{0,726}
+				\left( \frac
+					{ Q_{tot} }
+					{ Q_{tot} + Q_{int} }
+				\right) ^{0,363}
+				N_{TANK}^{0,242}
+				N_{ENG}^{0,157}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+    	W_{FS} = 2,49 \cdot
+				\left[
+					Q_{tot}^{0,6}
+					\left( \frac
+						{ Q_{tot} }
+						{ Q_{tot} + Q_{int} }
+					\right) ^{0,3}
+					N_{TANK}^{0,2}
+					N_{ENG}^{0,13}
+				\right] ^{1,21}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema de controle da aeronave ($W_{CTRL}$)}
+
+    Raymer:
+    \begin{equation*}
+  		W_{CTRL} =
+				0.053 \cdot
+				l_{FS}^{1,536} \cdot
+				b^{0,371}
+				\left(
+					n_Z W_O \cdot 10^{-4}
+				\right) ^{0,80}
+    \end{equation*}
+		\\~\\
+    Nicolai: (``\emph{Powered control system}'')
+    \begin{equation*}
+  		W_{CTRL} = 1,08 \cdot W_O^{0,7}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema hidráulico da aeronave ($W_{HYD}$)}
+
+    Raymer:
+    \begin{equation*}
+  		W_{HYD} = 0,001 \cdot W_O
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema aviônico da aeronave ($W_{AV}$)}
+
+    Raymer:
+    \begin{equation*}
+			W_{AV} = 2,117 \cdot W_{UAV}^{0,933}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+	  \begin{equation*}
+  		W_{AV} = 2,117 \cdot W_{UAV}^{0,933}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema elétrico da aeronave ($W_{EL}$)}
+
+    Raymer:
+    \begin{equation*}
+  		W_{EL} = 12,57 \left(
+					W_{FS} + W{AV}
+				\right) ^{0,51}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+  		W_{EL} = 12,57 \left(
+					W_{FS} + W{AV}
+				\right) ^{0,51}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema de ar condicionado e de degelo da aeronave ($W_{AC}$)}
+
+    Raymer:
+    \begin{equation*}
+  		W_{AC} = 0,265 \cdot
+				W_O^{0,52} \cdot
+				N_{OCC}^{0,68} \cdot
+				W_{AV}^{0,17} \cdot
+				M^{0,08}
+    \end{equation*}
+		\\~\\
+    Nicolai:
+    \begin{equation*}
+  		W_{AC} = 0,265 \cdot
+				W_O^{0,52} \cdot
+				N_{OCC}^{0,68} \cdot
+				W_{AV}^{0,17} \cdot
+				M^{0,08}
+    \end{equation*}
+		\\
+
+  \subsection{Peso do sistema de acessórios ($W_{FURN}$)}
+
+    Raymer:
+    \begin{equation*}
+  		W_{FURN} = 0,0582 \cdot W_O - 65
+    \end{equation*}
+		\\~\\
+    Nicolai
+    \begin{equation*}
+  		W_{FURN} = 34,5 \cdot N_{CREW} \cdot q_H^{0,25}
+    \end{equation*}
+		\\
+
+  \subsection{Cálculos}
+
+  A descrição de cada uma das variáveis e os valores utilizados estão apresentados na tabela da página \pageref{tbl:estimativasPeso}.
+	Os resultados obtidos para os métodos, propostos por Raymer e Nicolai, estão apresentados na página \pageref{tbl:estimativasPeso_resultados}.
+
+  \begin{table}[h]
+		\label{tbl:estimativasPeso}
+    \caption{Variáveis usadas no cálculo das estimativas de peso}
+    \centering
+    \begin{tabular}{ccl}
+      \toprule
+      Símbolo & Valor & Descrição \\
+      \midrule
+      $ S_W $
+				& 573,2 \si{ft^2}
+				& Área trapezoidal da asa
+			\\
+			$ W_{FW} $
+				& 7716,2 \si{lbf}
+				& Peso de combustível na asa
+			\\
+			$ AR $
+				& 12
+				& Razão de aspecto da asa
+			\\
+			$ \Lambda_{C/4} $
+				& 0
+				& Diedro da asa
+			\\
+			$ q $
+				& 32,94
+				& Pressão dinâmica em cruzeiro
+			\\
+			$ \lambda_W $
+				& 0,6
+				& Afilamento da asa
+			\\
+			$ b_W $
+				& 91,8 \si{ft}
+				& Envergadura da asa
+			\\
+			$ {(t/c)}_W $
+				& 0,18
+				& Razão entre espessura e corda da asa
+			\\
+			$ n_Z $
+				& 3,75
+				& Fator de carga último ($1,5 \cdot 2,5$)
+			\\
+			$ W_0 $
+				& 46518 \si{lbf}
+				& Peso máximo de decolagem
+			\\
+			$ V_H $
+				& 302,2 \si{kn}
+				& Velocidade máxima horizontal
+			\\
+			$ S_{HT} $
+				& 76,4 \si{ft^2}
+				& Área trapezoidal da empenagem horizontal
+			\\
+			$ \Lambda_{HT} $
+				& 0
+				& Diedro da empenagem horizontal
+			\\
+			$ \lambda_{HT} $
+				& 0,67
+				& Afilamento da empenagem horizontal
+			\\
+			$ b_{HT} $
+				& 26 \si{ft}
+				& Envergadura da empenagem horizontal
+			\\
+			$ t_{HT_{\max}} $
+				& 6 \si{in}
+				& Máxima espessura da corda da raiz da empenagem horizontal
+			\\
+			$ F_{TAIL} $
+				& 1
+				& 0 para empenagem convencional e 1 para empenagem em T
+			\\
+			$ S_{VT} $
+				& 94,7 \si{ft^2}
+				& Área trapezoidal da empenagem vertical
+			\\
+			$ \Lambda_{VT} $
+				& 0,25
+				& Diedro da empenagem vertical
+			\\
+			$ \lambda_{VT} $
+				& 0,70
+				& Afilamento da empenagem vertical
+			\\
+			$ b_{VT} $
+				& 14,2 \si{ft}
+				& Envergadura da empenagem vertical
+			\\
+			$ t_{VT_{\max}} $
+				& 6 \si{in}
+				& Máxima espessura da corda da raiz da empenagem vertical
+			\\
+			$ l_{FUS} $
+				& 98,4 \si{ft}
+				& Comprimento da parte pressurizada da fuselagem
+			\\
+			$ d_{FUS} $
+				& 6,88 \si{ft}
+				& Altura parte pressurizada da fuselagem
+			\\
+			$ V_P $
+				& 2445 \si{ft^3}
+				& Volume da seção pressurizada da cabine
+			\\
+			$ \Delta P $
+				& 7,4
+				& Diferencial de pressão da cabine
+			\\
+			$ l_F $
+				& 98,4 \si{ft}
+				& Comprimento da fuselagem
+			\\
+			$ w_F $
+				& 6,88 \si{ft}
+				& Máxima largura da fuselagem
+			\\
+			$ d_F $
+				& 6,88 \si{ft}
+				& Máxima altura da fuselagem
+			\\
+			$ n_1 $
+				& 4
+				& Máximo fator de carga de pouso
+			\\
+			$ W_l $
+				& 15630 \si{lbf}
+				& Peso de pouso projetado
+			\\
+			$ L_m $
+				& 40 \si{in}
+				& Altura do eixo do trem de pouso principal
+			\\
+			$ L_n $
+				& 40 \si{in}
+				& Altura do eixo do trem de pouso de nariz
+			\\
+			$ W_{ENG} $
+				& 1060,4 \si{lbf}
+				& Peso dos motores antes da instalação
+			\\
+			$ N_{ENG} $
+				& 2
+				& Número de motores
+			\\
+			$ Q_{TOT} $
+				& 1151
+				& Quantidade total de combustível em galões
+			\\
+			$ Q_{int} $
+				& 1151
+				& Quantidade de combustível em tanques integrais em galões
+			\\
+			$ W_{UAV} $
+				& 2204,6 \si{lbf}
+				& Peso do sistema aviônico antes da instalação na aeronave
+			\\ \hline
+    \end{tabular}
+  \end{table}
+
+\begin{table}[h]
+	\label{tbl:estimativasPeso_resultados}
+	\caption{Variáveis usadas no cálculo das estimativas de peso}
+	\centering
+	\begin{tabular}{cccl}
+		\toprule
+			Variável & Raymer [\si{lbf}] & Nicolai [\si{lbf}] & Descrição \\
+		\midrule
+			$ W_{W} $
+				& 3164,2
+				& 3517,1
+				& Peso estimado da asa
+			\\
+			$ W_{HT} $
+				& 161,5
+				& 265,9
+				& Peso estimado da empenagem horizontal
+			\\
+			$ W_{VT} $
+				& 263,6
+				& 230,2
+				& Peso estimado da empenagem vertical
+			\\
+			$ W_{FUS} $
+				& 3105,4
+				& 4416,2
+				& Peso estimado da fuselagem
+			\\
+			$ W_{LG} $
+				& 1249,1
+				& 280,3
+				& Peso estimado do trem de pouso
+			\\
+			$ W_{EI} $
+				& 3171,8
+				& 3171,8
+				& Peso do sistema de propulsão
+			\\
+			$ W_{FS} $
+				& 628,8
+				& 628,9
+				& Peso do sistema de combustível
+			\\
+			$ W_{CTRL} $
+				& 1708,5
+				& 1998,7
+				& Peso do sistema de controle da aeronave
+			\\
+			$ W_{HYD} $
+				& 46,5
+				& -
+				& Peso do sistema hidráulico da aeronave
+			\\
+			$ W_{AV} $
+				& 2786,5
+				& 2786,5
+				& Peso do sistema aviônico da aeronave
+			\\
+			$ W_{EL} $
+				& 796,8
+				& 796,8
+				& Peso do sistema elétrico da aeronave
+			\\
+			$ W_{AC} $
+				& 3517,6
+				& 3517,6
+				& Peso do sistema de ar-condicionado e degelo
+			\\
+			$ W_{FURN} $
+				& 205,7
+				& 334,1
+				& Peso dos acessórios da aeronave
+			\\
+			\bottomrule
+			$ W_{VAZIO TOTAL} $
+				& 20806
+				& 21944
+				& Peso vazio total da aeronave
+			\\ \hline
+	\end{tabular}
+\end{table}
+
+Observou-se, portanto, que por ambos os métodos os pesos estimados foram próximos no geral e também para muitos componentes analisados separadamente.
+O passeio do centro de gravidade da aeronave será realizado com base nos pesos dos componentes calculados e com base nos braços que vão gerar os momentos correspondentes de cada componente. Esta etapa será realizada após os cálculos inicias de estabilidade, visto que as dimensões necessárias serão obtidas destas análises. 

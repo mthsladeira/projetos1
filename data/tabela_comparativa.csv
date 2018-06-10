@@ -1,0 +1,38 @@
+n,Modelo,Passageiros,Tipo de motor,Numero de motores,Modelo dos motores,Potência (kW),Empuxo (kN),Teto de serviço (ft),Alcance (nm),Velocidade máxima (kts),Velocidade de cruzeiro (kts),Envergadura (m),Alongamento,Área alar (m^2),Comprimento (m),Altura (m),MTOW (kg),Peso vazio (kg),Carga paga (kg),Corrida de decolagem (m),Preço (kUSD),Ano do preço,Total de pedidos,Fabricado até (year),Posicao Asa,Forma em Planta da Asa,Geometria Empenagens,Trem de Pouso,Enflechamento
+29,Douglas DC-6 ,54,Pistão,2,4 x Pratt & Whitney R-2800-CA15,5360,NaN,25000,3983,300,270,35.81,9.436027226,135.9,30.66,8.66,44129,23840,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+12,Douglas DC-4,44,Pistão,2,4 x Pratt & Whitney R20002SDBG,4320,NaN,22300,2172,244,197,35.81,9.456903392,135.6,28.6,8.38,33112,19460,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+10,Convair 240,40,Pistão,2,2 x Pratt & Whitney R-2800-CA18 Double Wasp piston,2980,NaN,16000,1565,261.1111111,235,27.97,10.30725823,75.9,22.76,8.2,18956,12520,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+6,Curtis C46 Commando ,36,Pistão,2,2 x Pratt & Whitney R280034 ,2990,NaN,22000,1564,235,204,32.92,8.587372425,126.2,23.27,6.6,21772,14970,,,,,,,Baixa,Retotrapezoidal,Convencional,Triciclo,Nulo
+4,Douglas DC-3 ,32,Pistão,2,2 x Pratt & Whitney R1830S1C3G ,1640,NaN,23200,1307,187,143,28.96,9.145928026,91.7,19.66,5.16,12700,8030,,,,,,,Baixa,Trapezoidal,Convencional,Convencional,Nulo
+35,Embraer E170,72,Turbofan,2,2x GE CF34,NaN,126,41000,2150,470,430,26,9.3,72.72,29.9,9.85,38600,21141,9759,1644,38.7,2012,,,Baixa,Bitrapezoidal com winglet,Convencional,Triciclo,Positivo
+5,Fairchild Dornier 328JET ,34,Turbofan,2,2 x Pratt & Whitney Canada PW306B turbofans ,NaN,53.8,35000,2000,450,405,20.98,11.00401,40,21.28,7.24,15200,9344,,,,,,,Alta,Retotrapezoidal,Em T,Triciclo,Nulo
+16,Embraer ERJ145,48,Turbofan,2,2 x Rolls Royce AE 3007A turbofans,NaN,62.6,37000,1320,500,450,20.04,7.84378125,51.2,29.87,6.75,20600,11667,,,,,,,Baixa,Bitrapezoidal,Em T,Triciclo,Positivo
+20,Bombardier CRJ200,50,Turbofan,2,2 x GE CF34-3B1,NaN,77.68,41000,1650,460,424,21.21,9.304324716,48.35,26.77,6.22,24041,13835,6124,1920,,,,,Baixa,Bitrapezoidal com winglet,Em T,Triciclo,Positivo
+21,Canadair CL-600 Regional Jet CRJ-100 & 200,50,Turbofan,2,General Electric CF-34-3A1 (100) / CF-34-3B1s (200),NaN,82,41000,2005,459,424,21.21,8.254387156,54.5,26.77,6.22,21523,13740,,,,,,,Baixa,Bitrapezoidal com winglet,Em T,Triciclo,Positivo
+36,BAe 146-100 / Avro RJ70,82,Turbofan,4,Lycoming ALF 502R-5 / Honeywell LF 507-1F,NaN,124.4,35000,2090,426,404,26.34,8.98,77.3,26.19,8.61,38101,23820,8612,1195,,,,,Alta,Trapezoidal,Em T,Triciclo,Positivo
+33,Ilyushin 114,64,Turbo-hélice,2,Klimov TV7117S,3680,NaN,24900,540,270,254,30,10.98901099,81.9,26.88,9.32,23500,15000,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+30,Convair 580,56,Turbo-hélice,2,2 x Allison 501-D13H ,5600,NaN,20000,1970,330,297,32.12,12.06660117,85.5,24.84,8.89,26371,13732,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+32,Xian MA60,62,Turbo-hélice,2,Pratt & Whitney Canada PW127J,4102,NaN,25000,864,278,232,29.2,11.36853333,75,24.71,8.86,21800,13700,,,,,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+27,Convair 440,52,Turbo-hélice,2,2 x Pratt & Whitney R-2800-CB16,3730,NaN,24900,1677,290,261,32.12,12.06660117,85.5,24.84,8.58,22544,15110,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+26,Convair 340 ,52,Turbo-hélice,2,2 x Pratt & Whitney R-2800-CB16 ,3580,NaN,24500,1565,274.4444444,247,32.12,12.06660117,85.5,24.13,8.58,21320,13375,,,,,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+28,Fokker F-27 ,52,Turbo-hélice,2,2 × Rolls-Royce Dart RDa.7 Mk 532-7L turboprops,3430,NaN,28000,1404,256,235,29,12.01428571,70,25.5,8.41,19730,10398,5080,,,,,,Alta,Trapezoidal,Convencional,Triciclo,Nulo
+37,Bombadier Dash 8 Q400,82,Turbo-hélice,2, PW150,7562,NaN,27000,1100,360,300,28.4,12.6,64,25.7,8.4,30481,17819,12662,1425,,,,,Alta,Trapezoidal,Em T,Triciclo,Nulo
+23,IPTN N-25050,50,Turbo-hélice,2,2 x Allison AE 2100 C turboprop ,4878,NaN,25000,919,330,300,28,12.06153846,65,26.3,8.37,22000,13665,,,,,,,Alta,Trapezoidal,Em T,Triciclo,Nulo
+22,Fokker 50,50,Turbo-hélice,2,2 x Pratt & Whitney Canada PW125B,3728,NaN,25000,1110,318.8888889,287,29,12.01428571,70,25.25,8.32,19950,12520,,,,,,,Alta,Trapezoidal,Convencional,Triciclo,Nulo
+17,Antonov An-24,50,Turbo-hélice,2,Ivchenko AI-24A,1887,NaN,27560,1716,270,243,29.2,11.38,74.97,23.53,8.32,21000,13300,,,,,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+25,Antonov An-140,52,Turbo-hélice,2,2 × Klimov TV3-117VMA-SBM1,3676,NaN,25000,1307,310,250,24.505,11.77441225,51,22.6,8.23,21500,12810,,,,,,,Alta,Trapezoidal,Convencional,Triciclo,Nulo
+11,Let L-610 ,40,Turbo-hélice,2,Two 1305kW (1750shp) General Electric CT7D9D turboprops,2610,NaN,33700,1305,265,236,25.6,11.70285714,56,21.72,8.19,14500,8950,,,,,,,Alta,Trapezoidal,Em T,Triciclo,Nulo
+14,Casa/IPTN CN235,45,Turbo-hélice,2,General Eletric CT7-9C,2790,NaN,18000,2350,275,245,25.81,11.27167682,59.1,21.4,8.18,15100,9800,,,,,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+13,Casa CN235,45,Turbo-hélice,2,General Electric CT7-9C,2610,NaN,25000,2350,275,248,25.81,11.27167682,59.1,21.4,8.18,15100,9800,,,,,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+31,Saab 2000,58,Turbo-hélice,2,2 × Pratt & Whitney Canada PT6A-66B,6192,NaN,31000,1549,411.1111111,370,24,11,55.7,27.28,7.73,22800,13800,5900,,,,,,Baixa,Retotrapezoidal,Convencional,Triciclo,Nulo
+34,ATR 72-600,70,Turbo-hélice,2,2 × Pratt & Whitney Canada PW127M,3692,NaN,25000,825,305.5555556,275,27.05,12,61,27.71,7.65,23000,13311,,,,,,,Alta,Retotrapezoidal,Em T,Triciclo,Nulo
+18,ATR 42-600,50,Turbo-hélice,2,2 x Pratt & Whitney Canada PW-120 turboprops,2680,NaN,24900,716,265,243,24.57,11.07678716,54.5,22.67,7.59,18600,22674,,,,,476,2017,Alta,Retotrapezoidal,Em T,Triciclo,Nulo
+24,Hawker Siddeley HS-748 ,51,Turbo-hélice,2,2 × Rolls-Royce Dart RDa.7 Mk 536-2 turboprop,3400,NaN,25000,926,271.1111111,244,31.23,12.6664013,77,20.42,7.57,21092,12327,5136,,1600000,1972,,,Baixa,Trapezoidal,Convencional,Triciclo,Nulo
+19,Bombadier Dash 8 Q300,50,Turbo-hélice,2,2 x Pratt & Whitney Canada PW123A ,3550,NaN,25000,1228,287,258.3,27.43,13.38798754,56.2,25.68,7.49,18642,11657,,,,,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+8,Bombardier Dash 8 Q200,37,Turbo-hélice,2,PW123C/D,3206,NaN,25000,1125,321.1111111,289,27.4,13.8,54.4,22.25,7.49,16466,10477,4647,1000,,,,,Alta,Retotrapezoidal,Em T,Triciclo,Nulo
+15,Handley Page Herald ,47,Turbo-hélice,2,2 × Rolls-Royce Dart Mk.527 turboprop,2850,NaN,29700,1422,238,230,28.9,10.14835966,82.3,23.01,7.32,19818,11345,,,"£185,000",1960,,,Alta,Retotrapezoidal,Convencional,Triciclo,Nulo
+9,Dornier 328 ,39,Turbo-hélice,2,2 x Pratt & Whitney Canada PW119B,3250,NaN,25000,900,372.2222222,335,20.98,11.00401,40,21.22,7.24,13990,8920,,,8,1991,,,Alta,Retotrapezoidal,Em T,Triciclo,Nulo
+7,Short 360,36,Turbo-hélice,2,2 × Pratt & Whitney Canada PT6A-65AR turboprop,1062,NaN,20000,861,218,180,22.81,12.36151342,42.09,21.58,7.21,12292,7870,,,,,,,Alta,Reta,Convencional,Triciclo,Nulo
+3,Embraer EMB120 Brasilia,30,Turbo-hélice,2,2 × Pratt & Whitney Canada PW118/118A/118B turboprops,2680,NaN,29800,945,331.1111111,298,19.78,9.9,39.4,20,6.53,11500,7070,,1420,,,,,Baixa,Bitrapezoidal,Em T,Triciclo,Nulo
+2,Aerospatiale N 262 Fregate a Mohawk 298,29,Turbo-hélice,2,2 × Turbomeca Bastan VI C turboprops,1588,NaN,24000,600,208,194,21.9,8.720181818,55,19.28,6.21,10300,6654,,,,,,,Alta,Trapezoidal,Convencional,Triciclo,Nulo
+1,Piaggio P180 Avanti,8,Turbo-hélice,2,2 × Pratt & Whitney Canada PT6A-66B,1260,NaN,41000,1530,402,318,14.345,12.86118906,16,4.55,1.75,5488,3799,794,994,7.7,2017,,,Alta,Trapezoidal,Em T,Triciclo,Nulo

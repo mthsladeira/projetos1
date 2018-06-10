@@ -1,0 +1,80 @@
+\documentclass[11pt, a4paper, final, openright, twoside]{report}
+
+\includeonly{text/parte2,text/parte3}
+
+\usepackage[brazil]{babel}
+\usepackage[hyphens]{url}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[left=3cm,top=3.6cm,right=2cm,bottom=2cm,%
+			headheight=1.6cm,%
+			%includehead,
+            %includefoot,%
+            %showframe%
+            ]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{textcomp}
+\usepackage{booktabs} % For \toprule, \midrule and \bottomrule
+%\usepackage[bottom]{footmisc}
+%\usepackage{pgfplotstable} % Generates table from .csv
+%\usepackage{csvsimple}
+\usepackage{pdfpages}
+\usepackage{gnuplot-lua-tikz}
+\usepackage[colorlinks,urlcolor=blue,filecolor=black,citecolor=black,linkcolor=black]{hyperref}
+\usepackage{multicol}
+
+\setitemize{noitemsep}
+\setenumerate{noitemsep}
+\graphicspath{{images/}}
+
+\title{Relatório de Projetos I}
+\DeclareRobustCommand{\authorthing}{
+    \begin{center}\large
+        \begin{tabularx}{0.8\textwidth}{Xr}
+            \emph{Alunos:}           & \emph{Matrículas:} \\
+            Bernardo Bahia Monteiro & 2014013122 \\
+            Geovana Neves Felix Silva & 2014013220 \\
+            Laura Tameirão Sampaio Rodrigues & 2013025569 \\
+            Matheus Ladeira Boechat Lemos & 2013025690
+        \end{tabularx}
+    \end{center}}
+\author{\authorthing}
+
+% Workaround for getting the date in the right language
+\DeclareRobustCommand{\datething}{\today}
+\date{\datething}
+
+\input{header_and_footer}
+\begin{document}
+\input{titlepage}
+
+\listoffigures
+\listoftables
+\tableofcontents
+
+\input{text/intro}
+
+\include{text/parte1}
+
+\include{text/parte2}
+
+\include{text/parte3}
+
+\nocite{*}
+\bibliographystyle{ieeetr}
+%\bibliographystyle{apalike}
+\bibliography{biblist}
+
+\include{text/anexos}
+
+\end{document}
