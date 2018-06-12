@@ -6,11 +6,13 @@
 \section{Superfícies Sustentadoras}
 \label{superf_sustentadoras}
 
-Após a definição do ponto de projeto, forma em planta da asa e das empenagens, realizou-se a modelagem aerodinâmica das superfícies sustentadoras a fim de quantificar a polar de arrasto de cada uma bem como seu $C_{L_{max}}$. Além disso, o cálculo das principais derivadas longitudinais foram determinadas iterativamente com a análise de estabilidade e controle longitudinal visto que as empenagens tiveram suas geometrias refinadas. Utilizou-se os ábacos disponiveis em ETKIN, o software XFOIL para determinação das polares 2D e o software CEA-VLM desenvolvido pelo CEA-UFMG para determinação das polares 3D. As \autoref{superf_sustentadoras,eh,ev} apresentam as curvas $C_L$ x $\alpha$ e as polares de arrasto.
+Após a definição do ponto de projeto, forma em planta da asa e das empenagens, realizou-se a modelagem aerodinâmica das superfícies sustentadoras a fim de quantificar a polar de arrasto de cada uma bem como seu $C_{L_{max}}$. Além disso, o cálculo das principais derivadas longitudinais foram determinadas iterativamente com a análise de estabilidade e controle longitudinal visto que as empenagens tiveram suas geometrias refinadas. Utilizou-se os ábacos disponiveis em ETKIN, o software XFOIL para determinação das polares 2D e o software CEA-VLM desenvolvido pelo CEA-UFMG para determinação das polares 3D. As Seções \ref{asa}, \ref{eh} e \ref{ev}  apresentam as curvas $C_L$ x $\alpha$ e as polares de arrasto. O perfil escolhido para as empenagens é o NACA0012 visto que este é um perfil típico para esta aplicação.
 
 \subsection{Asa}
 \label{asa}
-A asa foi modelada utilizando o software CEA-VLM. Abaixo tem-se os paineis gerados pelo código em MATLAB para asa.
+A forma em planta da asa foi definida na \autoref{formaemplanta_asa} como sendo trapezoidal. Decidiu-se que o afilamento é em relação ao bordo de ataque, ou seja, não há enflechamento em relação ao bordo de ataque da asa. Essa escolha é devido a maior facilidade em posicionar o motor de forma a garantir que todo bordo de ataque da asa esteja a uma distância constante segura da hélice. Esta geometria implica que o centro aerodinâmico (CA) da asa seja mais a frente do que uma asa com afilamento em relação ao um quarto de corda visto que a corda média aerodinâmica estará posicionada mais a frente.
+
+A asa foi modelada utilizando o software CEA-VLM. Abaixo tem-se os paineis gerados pelo código em MATLAB para asa onde é mostrado a forma em planta final da asa definida a partir da \autoref{tbl:asa_trapezoidal} e da decisão de projeto descrita acima.
 
 \begin{figure}[H]
 \centering
@@ -18,6 +20,8 @@ A asa foi modelada utilizando o software CEA-VLM. Abaixo tem-se os paineis gerad
 \caption[Paineis aerodinâmicos - Asa]{Paineis aerodinâmicos - Asa}
 \label{fig:malha_asa}
 \end{figure}
+
+A partir do modelo aerodinâmico, foi possível analisar a curva de $C_L$ x $\alpha$ e polar de arrasto para asa mostrados nas figuras \ref{fig:asa_cl_alfa} e \ref{fig:asa_cl_cd}. Como descrito na \autoref{perfilasa}, o objetivo predominante na escolha do perfil da asa é a redução de arrasto, dessa forma, o perfil escolhido é de escoamento laminar com espessura máxima relativa de 18\%. Além disso, o alongamento da asa é superior ao valor típico encontrado para turboélices. A combinação dessas características permitem uma polar de arrasto competitiva para a asa sem prejudicar o projeto estrutural visto que, apesar de um alongamento maior, o perfil laminar apresenta uma espessura máxima relativa alta.
 
 \begin{figure}[H]
 \centering
@@ -33,17 +37,19 @@ A asa foi modelada utilizando o software CEA-VLM. Abaixo tem-se os paineis gerad
 \label{fig:asa_cl_cd}
 \end{figure}
 
+A \autoref{tbl:resultados_asa} resume os principais resultados da análise aerodinâmica para a asa. Como pode ser observado, a variação do coeficiente de sustentação com ângulo de ataque para a asa finita se aproxima do valor calculado para o perfil. Isso era esperado dado o maior alongamento da asa. O centro aerodinâmico da asa em relaçao a corda média aerodinâmica é a 18\% sendo uma consequência da forma em planta da asa. O $C_{L_{max}}$ é 1.619 sendo o ângulo de ataque de estol correspondente 18°. Por fim o $C_{L_0}$ , $C_{M_0}$ e $C_{M_{\alpha}}$ também são apresentados.
+
 \begin{table}[H]
 \centering
 \begin{tabular}{cc}
 \toprule
-$ \frac{\partial C_{l}}{\partial \alpha} $ & 4.740 \\ [0.3cm]
+$ \frac{\partial c_{l}}{\partial \alpha} $ & 4.740 \\ [0.3cm]
 $ \frac{\partial C_{L}}{\partial \alpha} $ & 4.586 \\ [0.3cm]
 $ C_{L_{max}} $ & 1.619 \\ [0.3cm]
 $ \alpha_{estol} $ & 18\textdegree\ \\ [0.3cm]
-$ c_{L_0} $ & 0.3293 \\ [0.3cm]
-$ c_{M_0} $ & -0.0447 \\ [0.3cm]
-$ c_{M_{\alpha}} $ & 0.3196 \\ [0.3cm]
+$ C_{L_0} $ & 0.3293 \\ [0.3cm]
+$ C_{M_0} $ & -0.0447 \\ [0.3cm]
+$ C_{M_{\alpha}} $ & 0.3196 \\ [0.3cm]
 $ x_{CA}/cma $ & 0.1803 \\ [0.3cm]
 \bottomrule
 \end{tabular}
@@ -54,12 +60,49 @@ $ x_{CA}/cma $ & 0.1803 \\ [0.3cm]
 \subsection{Empenagem Horizontal}
 \label{eh}
 
+A área e volume de cauda da empenagem horizontal foram definidos na \autoref{formaemplanta_empenagens}. A sua forma em planta foi escolhida como trapezoidal visto que essa geometria é típica para aeronaves turboélices além de proporcionar um comportamento similar a uma forma em planta elíptica sem aumentar a complexidade na fabricação. Os valores utilizados para alogamento e afilamento \cite{gudmundsson} estão apresentados na \autoref{tbl:AR_eh} e são próximos aos valores encontrados para a aeronave DASH 8 Q400 \cite{gudmundsson}. O alongamento típico para a empenagem horizontal geralmente é entre 3 e 5. O valor baixo de alogamento é devido a uma decisão de projeto para melhorar as características de estol da empenagem horizontal evitando, por exemplo, um estol abrupto.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\toprule
+$ AR $ & 3.5 \\
+$ \lambda_{EH} $ & 0.77 \\
+\bottomrule
+\end{tabular}
+\caption[Alongamento e Afilamento - Empenagem Horizontal]{Alongamento e Afilamento - Empenagem Horizontal}
+\label{tbl:AR_eh}
+\end{table}
+
+O valor para a distância entre o centro aerodinâmico da asa e da empenagem foi atualizado bem como o volume de cauda e área da empenagem devido a análise de estabilidade realizada no \autoref{estabilidade}. A \autoref{tbl:geometria_eh} apresenta os valores atualizados de $l_t$, $S_{eh}$, $\overline{V}_{eh}$, cordas na raiz e na ponta e a envergadura final da empenagem horizontal.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\toprule
+$ l_t $ & 12.255 m \\
+$ S_{eh} $ & 8.9 $m^2$ \\
+$ \overline{V}_{eh} $ & 1.2 \\
+$ c_{raiz} $ & 1.94 m \\
+$ c_{ponta} $ & 1.49 m \\
+$ b $ & 5.19 m \\
+\bottomrule
+\end{tabular}
+\caption[Geometria refinida - Empenagem Horizontal]{Geometria refinida - Empenagem Horizontal}
+\label{tbl:geometria_eh}
+\end{table}
+
+
+A partir da \autoref{tbl:geometria_eh}, tem-se os paineis gerados pelo software CEA-VLM na \autoref{fig:malha_eh} em que é mostrado a forma em planta da empenagem horizontal.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textwidth]{images/parte3/malha_eh.PNG}
 \caption[Paineis aerodinâmicos - Empenagem Horizontal]{Paineis aerodinâmicos - Empenagem Horizontal}
 \label{fig:malha_eh}
 \end{figure}
+
+A partir do modelo aerodinâmico, foi possível analisar a curva de $C_L$ x $\alpha$ e polar de arrasto para empenagem horizontal mostrados nas figuras \ref{fig:eh_cl_alfa} e \ref{fig:eh_cl_cd}. Estas informações são necessárias para a análise de estabilidade realizada no \autoref{estabilidade}.
 
 \begin{figure}[H]
 \centering
@@ -74,6 +117,8 @@ $ x_{CA}/cma $ & 0.1803 \\ [0.3cm]
 \caption[Polar de arrasto para a Empenagem Horizontal]{Polar de arrasto para a Empenagem Horizontal}
 \label{fig:eh_cl_cd}
 \end{figure}
+
+A \autoref{tbl:resultados_eh} resume os principais resultados da análise aerodinâmica para a empenagem horizontal. Como pode ser observado, a variação do coeficiente de sustentação com ângulo de ataque para a empenagem finita é menor que valor calculado para o perfil. Isso era esperado dado o menor alongamento da empenagem definido de forma a melhorar características de estol. O $C_{L_{max}}$ é 1.097 sendo o ângulo de ataque de estol correspondente 18°.
 
 \begin{table}[H]
 \centering
@@ -92,12 +137,50 @@ $ \alpha_{estol} $ & 18\textdegree\ \\ [0.3cm]
 \subsection{Empenagem Vertical}
 \label{ev}
 
+A área e volume de cauda da empenagem vertical foram definidos na \autoref{formaemplanta_empenagens}. A sua forma em planta foi escolhida como trapezoidal visto que essa geometria é típica para aeronaves turboélices. Os valores utilizados para alogamento e afilamento \cite{gudmundsson} estão apresentados na \autoref{tbl:AR_ev} e são próximos aos valores encontrados para a aeronave DASH 8 Q400. O alongamento típico para a empenagem vertical geralmente é entre 1 e 2.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\toprule
+$ AR $ & 1.4 \\
+$ \lambda_{EV} $ & 0.71 \\
+\bottomrule
+\end{tabular}
+\caption[Alongamento e Afilamento - Empenagem Vertical]{Alongamento e Afilamento - Empenagem Vertical}
+\label{tbl:AR_ev}
+\end{table}
+
+
+O valor para a distância entre o centro aerodinâmico da asa e da empenagem foi atualizado bem como o volume de cauda e área da empenagem. A \autoref{tbl:geometria_ev} apresenta os valores atualizados de $S_{ev}$, $\overline{V}_{ev}$, cordas na raiz e na ponta e a envergadura final da empenagem horizontal. O enflechamento em relação a um quarto de corda foi definido como 20°.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\toprule
+$ S_{ev} $ & 11.89 $m^2$ \\
+$ \overline{V}_{ev} $ & 1.2 \\
+$ c_{raiz} $ & 3.41 m \\
+$ c_{ponta} $ & 2.42 m \\
+$ b $ & 4.08 m \\
+$ Enflechamento $ & 20° \\
+\bottomrule
+\end{tabular}
+\caption[Geometria refinada - Empenagem Vertical]{Geometria refinida - Empenagem Vertical}
+\label{tbl:geometria_ev}
+\end{table}
+
+A partir da \autoref{tbl:geometria_ev}, tem-se os paineis gerados pelo software CEA-VLM na \autoref{fig:malha_eh} em que é mostrado a forma em planta da empenagem vertical.
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textwidth]{images/parte3/malha_ev.PNG}
 \caption[Paineis aerodinâmicos - Empenagem Vertical]{Paineis aerodinâmicos - Empenagem Vertical}
 \label{fig:malha_ev}
 \end{figure}
+
+A partir do modelo aerodinâmico, foi possível analisar a curva de $C_L$ x $\alpha$ e polar de arrasto para empenagem vertical mostrados nas figuras \ref{fig:ev_cl_alfa} e \ref{fig:ev_cl_cd}.
 
 \begin{figure}[H]
 \centering
@@ -113,6 +196,7 @@ $ \alpha_{estol} $ & 18\textdegree\ \\ [0.3cm]
 \label{fig:ev_cl_cd}
 \end{figure}
 
+A \autoref{tbl:resultados_ev} resume os principais resultados da análise aerodinâmica para a empenagem vertical. Como pode ser observado, a variação do coeficiente de sustentação com ângulo de ataque para a empenagem finita é consideravelmente menor que valor calculado para o perfil. Isso era esperado dado o menor alongamento da empenagem definido de forma a melhorar características de estol. O $C_{L_{max}}$ é 1.097 sendo o ângulo de ataque de estol correspondente 23°.
 
 \begin{table}[H]
 \centering
