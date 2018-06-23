@@ -1,42 +1,10 @@
 \chapter{Estabilidade e Controle}
 \label{estabilidade}
 
-\section{Diagrama Vn}
-\label{diagramavn}
-
-O Diagrama Vn foi definido a partir da análise de desempenho realizada para definir o ponto de projeto (\autoref{diagramarestricoes}) e a análise aerodinâmica da aeronave (\autoref{superf_sustentadoras}) considernado asa limpa (sem deflexão de superfícies de hipersustentação) e MTOW. A \autoref{tbl:velocidadesprojeto} resume as velocidades de projeto de acordo com ISCOLD e o diagrama vn é apresentado na \autoref{fig:diagramavn} conforme a norma \textit{CFR Part 25}. O fator de carga máximo da aeronave é 2.5 e o fator de carga mínimo é -1.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.75\textwidth]{images/parte3/diagramavn_asalimpa.png}
-\caption[Diagrama Vn]{Diagrama Vn}
-\label{fig:diagramavn}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{cccc}
-\toprule
-Velocidade & Descrição & Definição & Valor \\ \midrule
-$V_{S_{+}}$ & Velocidade de estol & $ \sqrt{\frac{2 W}{\rho S C_{L_{max}}}} $ & 61.33 m/s \\ [0.3cm]
- & positivo (asa limpa) & &  \\ [0.3cm]
-$V_A$ & Velocidade de Manobra & $ V_{S_{+}} \sqrt{n_{max}} $ & 96.97 m/s \\ [0.3cm]
-$V_C$ & Velocidade de Cruzeiro & Requisito & 140 m/s \\  [0.3cm]
-$V_H$ & Velocidade Horizontal & $V_C/0.9$ & 155.56 m/s \\  [0.3cm]
- & Máxima & &  \\ [0.3cm]
-$V_D$ & Velocidade de Mergulho & $1.25 V_C$ & 194.44 m/s \\ [0.3cm]
-$V_{S_{-}}$ & Velocidade de estol & $ \sqrt{\frac{2 W}{\rho S C_{L_{min}}}} $ & 79.17 m/s \\ [0.3cm]
- & negativo (asa limpa) & &  \\ [0.3cm]
-\bottomrule
-\end{tabular}
-\caption[Velocidades de Projeto - Asa Limpa]{Velocidades de Projeto - Asa Limpa}
-\label{tbl:velocidadesprojeto}
-\end{table}
-
 \subsection{Principais Derivadas Longitudinais}
 \label{derivadas}
 
-As derivadas aerodinâmicas foram estimadas a partir de ábacos disponíveis em ETKIN e pela modelagem aerodinâmica discutida na \autoref{superf_sustentadoras}. Os valores apresentados na \autoref{tbl:derivadas} são os valores finais dado a atualização da geometria da empenagem horizontal e são os valores usados nas análises seguintes.
+As derivadas aerodinâmicas foram estimadas a partir de ábacos disponíveis em Etkin \cite{etkin1996dynamics} e pela modelagem aerodinâmica discutida na \autoref{superf_sustentadoras}. Os valores apresentados na \autoref{tbl:derivadas} são os valores finais dado a atualização da geometria da empenagem horizontal e são os valores usados nas análises seguintes.
 
 \begin{table}[H]
 \centering
@@ -320,7 +288,7 @@ A partir das equações \ref{voo1g_1} a \ref{voo1g_7}, é possível determinar a
 
 A inclinação negativa das curvas é característica de uma aeronave estaticamente estável.
 
-As equações equações \ref{vooNz_1} a \ref{vooNz_4} permitem a determinção das deflexões de profundor para manobra equilibrada considerando os limites de CG definidos em \autoref{margem}, o diagrama vn definido em \label{diagramavn} e MTOW. A \autoref{fig:def_vooNz} apresenta o resultado obtido.
+As equações equações \ref{vooNz_1} a \ref{vooNz_4} permitem a determinção das deflexões de profundor para manobra equilibrada considerando os limites de CG definidos em \autoref{margem}, o diagrama vn definido em \autoref{diagramavn} e MTOW. A \autoref{fig:def_vooNz} apresenta o resultado obtido.
 
 \begin{figure}[H]
 \centering
