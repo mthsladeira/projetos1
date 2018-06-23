@@ -1,31 +1,32 @@
 \section{Superficies hipersustentadoras}
-Para os cálculos iniciais de desempenho, apresentados na \autoref{diagramarestricoes}, foi considerado que o coeficiente de sustentação máximo da asa era de 2. Agora, com os cálculos refinados de aerodinâmica apresentados neste capítulo, o $C_L$ máximo da asa é, na verdade, de 1,62. Isso significa que para a decolagem e pouso o valor desse coeficiente deve ser aumentado em pelo menos 0,4 durante pousos e decolagens para cumprir com os requisitos estipulados para a missão. Como a geometria da asa foi otimizada para cruzeiro, ela não deve ser modificada para essa fase de voo. A solução é utilizar uma asa de geometria variável, através do uso de superfícies hipersustentadoras: flaps e slats.
+Para os cálculos iniciais de desempenho, apresentados no \autoref{diagramarestricoes}, foi considerado que o coeficiente de sustentação máximo da asa era de 2.
+Agora, com os cálculos refinados de aerodinâmica apresentados neste capítulo, o $C_L$ máximo da asa é, na verdade, de 1,62.
+Isso significa que, para a decolagem e pouso, o valor desse coeficiente deve ser aumentado em pelo menos 0,4 durante pousos e decolagens para cumprir com os requisitos estipulados para a missão.
+Como a geometria da asa foi otimizada para cruzeiro, ela não deve ser modificada para essa fase de voo.
+A solução é utilizar uma asa de geometria variável, através do uso de superfícies hipersustentadoras: flaps e slats.
 
-De acordo com os dados apresentados em \cite{gudmundsson} é relativamente fácil conseguir esse aumento em $C_L$. O uso de flaps simples (``plain flaps'')  isoladamente já cumpriria com esse requisito. O projeto aqui apresentado não se contentará com isso e procurará especificar o melhor sistema de hipersustentação possível, o que poderá ser usado para aumentar o $C_L$ máximo em iterações futuras e melhorar o desempenho da aeronave, possívelmente alterando seu ponto de projeto.
+De acordo com os dados apresentados em \cite{gudmundsson}, é relativamente fácil conseguir esse aumento em $C_L$.
+O uso de flaps simples (``\emph{plain flaps}'')  isoladamente já cumpriria com esse requisito.
+O projeto aqui apresentado não se contentará com isso e procurará especificar o melhor sistema de hipersustentação possível, o que poderá ser usado para aumentar o $C_L$ máximo em iterações futuras e melhorar o desempenho da aeronave, possívelmente alterando seu ponto de projeto.
 
 \subsection{Slats}
-O slat a ser utilizado é um de três posições (pouso, decolagem e retraido). A
-psoição para pouso é escolhida para maximizar a sustentação e causa grande
-aumento de arrasto, o que torna o pouso mais controlado. A de decolagem é
-projetada para maximizar o desempenho de subida.
+O slat a ser utilizado é um de três posições (pouso, decolagem e retraído).
+A posição para pouso é escolhida para maximizar a sustentação e causa grande aumento de arrasto, o que torna o pouso mais controlado.
+A de decolagem é projetada para maximizar o desempenho de subida.
 
 De acordo com \cite{gudmundsson}, um flap desse tipo traz ganhos de
 \begin{align}
-    \Delta {C_l}_{\max} &\approx 0,84 \\
+    \Delta {C_l}_{\max} &\approx {0,84} \\
     \Delta {\alpha}_{\max} &\approx \ang{11} \\
     \Delta {C_d}_{\min} &\approx 80\cdot 10^{-4} \\
-    \Delta {C_m} &\approx -0,115 
+    \Delta {C_m} &\approx -{0,115}
 \end{align}
 A deflexão dos slats é de aproximadamente \ang{25}.
 
 \subsection{Flaps}
-Para aeronaves de transporte, o usual é a utilização de flaps fowler com uma ou
-duas fendas (``slots''). Esse tipo de flap proporciona ganhos bastante elevados
-em $C_L$ e a opção de ganhos moderados ou grandes em arrasto, dependendo da
-configuração (decolagem ou pouso). Para este projeto, o flap fowler de uma fenda
-foi preferido devido à sua maior simplicidade construtiva, e a não haver
-necessidade dos ganhos de $C_L$ superiores que podem ser obtidos usando mais
-fendas.
+Para aeronaves de transporte, o usual é a utilização de \emph{flaps fowler} com uma ou duas fendas (``\emph{slots}'').
+Esse tipo de flap proporciona ganhos bastante elevados em $C_L$ e a opção de ganhos moderados ou grandes em arrasto, dependendo da configuração (decolagem ou pouso).
+Para este projeto, o \emph{flap fowler} de uma fenda foi preferido devido à sua maior simplicidade construtiva, e a não haver necessidade dos ganhos de $C_L$ superiores que podem ser obtidos usando mais fendas.
 
 De acordo com \cite{gudmundsson}, os ganhos esperados são de
 \begin{align*}
@@ -33,16 +34,15 @@ De acordo com \cite{gudmundsson}, os ganhos esperados são de
     \Delta {C_l}_{\max}|_{\text{pouso}} &\approx 1,92 \\
     \Delta {\alpha}_{\max} &\approx \ang{-7} \\
     \Delta {C_d}_{\min} &\approx 40\cdot 10^{-4} \\
-    \Delta {C_m} &\approx -0,75 
+    \Delta {C_m} &\approx -0,75
 \end{align*}
-A deflexão de decolagem é de $\ang{15}$ e a de pouso é de $\ang{40}$.
+A deflexão de decolagem é de \ang{15} e a de pouso é de \ang{40}.
 
 \subsection{Novos coeficientes para a asa}
-Os slats deverão ser instalados por toda a extensão da asa. Os flaps obviamente
-não podem ser instalados no mesmo lugar dos aileros, então só irão até essas
-superfícies de controle. Isso tem o benefício adicional de evitar o estol de
-ponta com as superfícies de hipersustentação defletidas, já que, sem os flaps, o
-ângulo de estol da ponta de asa será substancialmente maior que o da raiz.
+Os slats deverão ser instalados por toda a extensão da asa.
+Os flaps obviamente não podem ser instalados no mesmo lugar dos ailerons, então só irão até essas
+superfícies de controle.
+Isso tem o benefício adicional de evitar o estol de ponta com as superfícies de hipersustentação defletidas, já que, sem os flaps, o ângulo de estol da ponta de asa será substancialmente maior que o da raiz.
 
 Considerando que o aileron vai ocupar aproximadamente 20\% da envergadura, temos
 que a área flapeada é dada por
@@ -61,5 +61,5 @@ e os seus valores são
     {C_L}_{\max}|_{\text{pouso}} &\approx 4.1\\
     {\alpha}_{\max} &\approx \ang{22} \\
     {C_d}_{\min} &\approx 151\cdot 10^{-4} \\
-    {C_M} &\approx -0,80 
+    {C_M} &\approx -0,80
 \end{align*}
