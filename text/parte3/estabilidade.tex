@@ -124,7 +124,7 @@ A margem estática manche fixo é positiva e maior que o critério de 5\% o que 
 \section{Controle Longitudinal - Profundor}
 \label{controlelongitudinal}
 
-A análise de controle longitudinal é pautada na carga no atuador representado pelo \textit{hinge moment} da superfície e pelos batentes de deflexão devido a atuação das superfícies de controle por um sistema hidráulico. Definido o escopo, avaliou-se duas opções de profundor considerando formato elíptico do bordo de ataque:
+A análise de controle longitudinal é pautada na carga no atuador representado pelo momento na articulação da superfície e pelos batentes de deflexão devido a atuação das superfícies de controle por um sistema hidráulico. Definido o escopo, avaliou-se duas opções de profundor considerando formato elíptico do bordo de ataque:
 
 \begin{enumerate}
 \item Profundor correspondente a 20\% da corda da empenagem horizontal
@@ -132,7 +132,7 @@ A análise de controle longitudinal é pautada na carga no atuador representado 
 \item Profundor correspondente a 30\% da corda da empenagem horizontal
 \end{enumerate}
 
-A comparação entre ambas foi realizada considerando critérios como proximidade com os batentes de deflexão da superfície de controle e magnitude do \textit{hinge moment} (momento de articulação) visando reduzir carga no atuador. Os batentes de deflexão foram definidos a partir de valores típicos encontrados e estão apresentados na \autoref{tbl:batentes}.
+A comparação entre ambas foi realizada considerando critérios como proximidade com os batentes de deflexão da superfície de controle e magnitude do momento na articulação visando reduzir carga no atuador. Os batentes de deflexão foram definidos a partir de valores típicos encontrados e estão apresentados na \autoref{tbl:batentes}.
 
 \begin{table}[H]
 \centering
@@ -146,7 +146,7 @@ Batente negativo & -23\textdegree\ \\
 \label{tbl:batentes}
 \end{table}
 
-Do ponto de vista de carga no atuador, o \textit{hinge moment} foi calculado para manter voo reto e nivelado de acordo com o envelope de velocidades apresentado pela aeronave no CG dianteiro no MTOW. O equacionamento desta condição de voo é dado pelas equações \ref{voo1g_1} a \ref{voo1g_7} e a \autoref{fig:comp_hingemoment} mostra o resultado obtido para o \textit{hinge moment}.
+Do ponto de vista de carga no atuador, o momento na articulação foi calculado para manter voo reto e nivelado de acordo com o envelope de velocidades apresentado pela aeronave no CG dianteiro no MTOW. O equacionamento desta condição de voo é dado pelas equações \ref{voo1g_1} a \ref{voo1g_7} e a \autoref{fig:comp_hingemoment} mostra o resultado obtido para o momento na articulação.
 
 % EQUAÇÕES - VOO TRIMADO 1G
 \begin{equation}
@@ -186,7 +186,7 @@ B_2 = 0.5 \rho S_{\eta} \overline{c_{\eta}} (b_0 + b_2 (\frac{C_{m_0} - \overlin
 
 \begin{description}
 \item[$\overline{\eta}$ -] Deflexão de profundor para manter voo reto e nivelado
-\item[$\overline{M_H}$ -] hinge moment para voo reto e nivelado
+\item[$\overline{M_H}$ -] momento na articulação para voo reto e nivelado
 \item[$a_3$ -] Variação do coeficiente de sustentação da empenagem horizontal com deflexão do compensador (tab)
 \item[$b_0$ -] É nulo no caso de perfis assimétricos (NACA0012)
 \item[$b_3$ -] Variação do coeficiente de momento na articulação do profundor com deflexão do compensador (tab)
@@ -195,11 +195,11 @@ B_2 = 0.5 \rho S_{\eta} \overline{c_{\eta}} (b_0 + b_2 (\frac{C_{m_0} - \overlin
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{images/parte3/comparacao_hingemoment.png}
-\caption[Comparação de \textit{Hinge Moment} entre diferentes profundores em tamanho]{Comparação de \textit{Hinge Moment} entre diferentes profundores em tamanho para voo reto e nivelado e CG dianteiro}
+\caption[Comparação de momento na articulação entre diferentes profundores em tamanho]{Comparação de momento na articulação entre diferentes profundores em tamanho para voo reto e nivelado e CG dianteiro}
 \label{fig:comp_hingemoment}
 \end{figure}
 
-Como pode ser observado, o profundor menor apresenta um \textit{hinge moment} menor ao longo do envelope de velocidade evidenciando um benefício em sua escolha.
+Como pode ser observado, o profundor menor apresenta um momento na articulação menor ao longo do envelope de velocidade evidenciando um benefício em sua escolha.
 
 A \autoref{fig:comp_def} apresenta o resultado obtido a partir das derivadas aerodinâmicas para a deflexão de profundor necessária para realização de uma manobra longitudinal equilibrada no fator de carga máximo, CG dianteiro e MTOW. O equacionamento desta condição de voo é dado pelas equações \ref{margemmanobra1} a \ref{vooNz_4}.
 
@@ -247,7 +247,7 @@ M_H' = \overline{M_H} + \Delta\overline{M_H}
 \end{equation}
 
 \begin{description}
-\item[$M_H'$ -] Hinge moment necessário para executar manobra
+\item[$M_H'$ -] momento na articulação necessário para executar manobra
 \item[$\eta'$ -] Deflexão de profundor necessára para executar manobra
 \end{description}
 
