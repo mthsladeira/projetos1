@@ -77,3 +77,37 @@ $ C_{n_{p}} $ &  0.0404 & $ C_{n_{q}} $ &    0.0  & $ C_{n_{r}} $ & -0.2748 \\ [
 \end{table}
 
 Dessa forma, conclui-se que a aeronave é estável. O controle definido para a aeronave no \autoref{estabilidade} se mantém sendo as dimensões do leme de direção e aileron identicas à aeronave ATR 42-600.
+
+\section{Estabilidade para CG alternativo (sem APU)}
+
+Para a configuração da aeronave sem APU, a posição do CG é
+\begin{equation}
+  x_{CG} = 12,82\text{m}
+\end{equation}
+Isso é bem próximo da posição nominal do CG, a 12,9m do nariz.
+ Dessa forma, a estabilidade não é muito afetada.
+ A aeronave continua estável.
+ As derivadas aerodinâmicas para essa configuração são:
+
+\begin{table}[H]
+\centering
+\caption{Derivadas aerodinâmicas para posição alternativa do CG (sem APU)}
+\begin{tabular}{cccc}
+\toprule
+$ C_{L_{\alpha}} $ &   6.607 & $ C_{L_{\beta}} $ &     0.0  \\ [0.3cm]
+$ C_{Y_{\alpha}} $ &     0.0 & $ C_{Y_{\beta}} $ & -0.6384  \\ [0.3cm]
+$ C_{l_{\alpha}} $ &     0.0 & $ C_{l_{\beta}} $ & -0.0433  \\ [0.3cm]
+$ C_{m_{\alpha}} $ & -1.2882 & $ C_{m_{\beta}} $ &     0.0  \\ [0.3cm]
+$ C_{n_{\alpha}} $ &     0.0 & $ C_{n_{\beta}} $ &  0.1628  \\ [0.3cm]
+\bottomrule
+\end{tabular}
+\begin{tabular}{cccccc}
+\toprule
+$ C_{L_{p}} $ &     0.0 & $ C_{L_{q}} $ & 14.1248  & $ C_{L_{r}} $ &   0.0   \\ [0.3cm]
+$ C_{Y_{p}} $ & -0.0534 & $ C_{Y_{q}} $ &    0.0  & $ C_{Y_{r}} $ & 0.6300  \\ [0.3cm]
+$ C_{l_{p}} $ & -0.6656 & $ C_{l_{q}} $ &    0.0  & $ C_{l_{r}} $ & 0.0051 \\ [0.3cm]
+$ C_{m_{p}} $ &     0.0 & $ C_{m_{q}} $ & -55.6492  & $ C_{m_{r}} $ &   0.0  \\ [0.3cm]
+$ C_{n_{p}} $ &  0.0142 & $ C_{n_{q}} $ &    0.0  & $ C_{n_{r}} $ & -0.2748 \\ [0.3cm]
+\bottomrule
+\end{tabular}
+\end{table}
