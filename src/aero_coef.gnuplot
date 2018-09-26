@@ -86,8 +86,7 @@ plot "polar663-418.sort.dat" using 2:($3*1e4) with lines title "66\\textsubscrip
 ### Arrasto no Balde Laminar
 
 set xtics nomirror
-set x2tics ("\\footnotesize cruise" 0.06811,\
-            "\\footnotesize top-of-climb" 0.5554)
+set x2tics ("\\footnotesize cruise" 0.66)
 set xrange [0:1]
 set yrange [35:70]
 
