@@ -1,0 +1,68 @@
+\chapter{Dimensionamento Estrutural}
+
+\section{Dimensionamento Estrutural da Asa}
+
+\subsection{Dimensionamento das longarinas}
+A partir do esforços apresentados nas figuras \ref{fig:cort_ASA}, \ref{fig:flet_ASA} e \ref{fig:torc_ASA}, pode-se realizar um dimensionamento das longarinas 1 e 2 da asa, utilizando o momento de inércia de cada seção, o momento fletor atuante e a distância do centro da seção até as extremidades, onde o valor da tensão é o máximo.
+
+Considerou-se durante este dimensionamento que as longarinas serão fabricadas de uma liga de alumínio da série 7000, devido a maior facilidade de projeto, construção e manutenção. No dimensionamento o valor de tensão obtido em cada seção foi comparado ao limite de resistência do material selecionado, aplicando-se um fator de material de 1.15.
+Considerou-se a existência de duas longarinas em perfil I, formando com o revestimento, um caixão principal capaz de suportar os esforços de torção na asa, e considerou-se que as longarinas suportariam sozinhas os esforços fletores.
+Os resultados obtidos do dimensionamento estrutural das longarinas estão apresentados na \autoref{tbl:longarinas} e foram considerados satisfatórios para esta etapa de projeto.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+\toprule
+(mm) & Raiz & Ponta \\ \midrule
+Longarina 1 &  &   \\ \midrule
+Espessura mesas & 12 & 8 \\
+Largura mesas & 60 & 40\\
+Altura alma & 447.6 & 266.6 \\
+Espessura alma & 5 & 2.5 \\ \midrule
+Longarina 2 &  &   \\ \midrule
+Espessura mesas & 10 & 5 \\
+Largura mesas & 50 & 30 \\
+Altura alma & 373.0 & 225.5 \\
+Espessura alma & 5 & 2.5 \\
+\bottomrule
+\end{tabular}
+\caption{Dimensionamento Preliminar da Longarina da Asa}
+\label{tbl:longarinas2}
+\end{table}
+
+
+\subsection{Dimensionamento das nervuras}
+Devido a razões aerodinâmicas o contorno da asa na direção da corda deve ser mantido sem distorção considerável. Portanto, são utilizadas nervuras para suportar e dar forma ao revestimento e também para limitar o tamanho dos reforçadores entre elas, gerando uma resistência de compressão eficiente. As nervuras ainda tem um outro propósito estrutural que é o de atuar como um distribuidor de carregamentos.
+
+A \autoref{fig:nervura_asa} ilustra uma nervura típica, onde também observa-se os reforçadores da asa. Observa-se também furos de alívio nesta imagem da nervura e também janelas de inspeção.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/parte4/nervura}
+\caption{Nervura típica em uma asa}
+\label{fig:nervura_asa}
+\end{figure}
+
+As nervuras são dimensionadas visando cobrir as seguintes funções:
+\begin{itemize}
+  \item Carregamentos primários: os carregamentos primários atuantes em uma nervura são as cargas externas que devem ser transferidas para o restante da estrutura;
+  \item Cargas de inércia: combustível, estrutura, equipamentos;
+  \item Cargas devido aos momentos de flexão: quando a asa é submetida aos carregamentos de flexão, as nervuras são submetidas a compressão, conforme mostrado na \autoref{fig:nervura_asa2}
+  \item Redistribuição de cargas concentradas: como cargas da nacele e do trem de pouso para as longarinas da asa e para os paineis de revestimento
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/parte4/nervura2}
+\caption{Comportamento da asa devido à flexão}
+\label{fig:nervura_asa2}
+\end{figure}
+
+A análise estrutural de uma nervura consiste em analisar os seguintes itens:
+\begin{itemize}
+  \item Cisalhamento na alma das nervuras
+  \item Cisalhamento entre as nervuras e o revestimento
+  \item Cisalhamento entre as nervuras e a longarina
+  \item Espaçamento entre nervuras
+\end{itemize}
