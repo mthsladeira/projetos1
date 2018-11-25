@@ -70,7 +70,6 @@ Os valores encontrados para as cargas são mostrados nas \autoref{fig:cort_ASA} 
 \label{fig:torc_EV}
 \end{figure}
 
-
 \section{Trem de Pouso}
 
 Foram também calculadas as cargas no trem de pouso para diferentes condições recorrentes na operação da aeronave. São elas: pouso em três rodas, pouso em duas rodas e pouso em uma única roda. No segundo e terceiro casos, são considerados apenas os trens de pouso principais. Em todas as três situações, entretanto, consideram-se três sub-casos: pouso alinhado, ou seja, com o eixo longitudinal da aeronave apontado na direção de deslocamento, pouso não alinhado com as rodas em aceleração (ou seja, com velocidade tangencial nula), e pouso não alinhado com as rodas em velocidade tangencial igual à velocidade de deslocamento da aeronave. Todos estes casos são exigidos de acordo com a CFR Part 23.
@@ -81,4 +80,60 @@ Os resultados para os cálculos de cargas em trem de pouso são mostrados na \au
 \includegraphics[width=\textwidth]{cargas/imagens/Cargas_tdp.jpg}
 \caption{Cargas no trem de pouso}
 \label{fig:cargas_tdp}
+\end{figure}
+
+
+\section{Fuselagem}
+
+A partir dos dados obtidos pelo cálculo de cargas nas superfícies aerodinâmicas e nos trens de pouso é possível estimar as cargas atuantes na fuselagem, e dessa forma dimensionar a sua estrutura. Os resultados obtidos a partir das cargas anteriormente calculadas são apresentados nas \autoref{fig:cort_FUS} a \autoref{fig:torc_FUSV}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/cort_FUS.jpg}
+\caption{Força cortante para as três situações de pouso distribuída pelo comprimento da fuselagem}
+\label{fig:cort_FUS}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/flet_FUS.jpg}
+\caption{Momento fletor para as três situações de pouso distribuído pelo comprimento da fuselagem }
+\label{fig:flet_FUS}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/norm_FUS.jpg}
+\caption{Força normal para as três situações de pouso distribuída pelo comprimento da fuselagem }
+\label{fig:norm_FUS}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/cort_FUSV.jpg}
+\caption{Força cortante em voo distribuída pelo comprimento da fuselagem}
+\label{fig:cort_FUSV}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/flet_FUSV.jpg}
+\caption{Momento fletor em y em voo distribuído pelo comprimento da fuselagem}
+\label{fig:flet_FUSV}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/flet_FUSV2.jpg}
+\caption{Momento fletor em z em voo distribuído pelo comprimento da fuselagem}
+\label{fig:flet_FUSV2}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{cargas/imagens/torc_FUSV.jpg}
+\caption{Momento torçor em voo distribuído pelo comprimento da fuselagem}
+\label{fig:torc_FUSV}
 \end{figure}
