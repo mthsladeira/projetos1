@@ -1,0 +1,30 @@
+\section{Expessura do revestimento}
+
+A expessura do revestimento foi dimensionada com base na pressão de pressurizaçãele deve suportar.
+Os demais esforços serão suportados por esse revestimento somado aos reforçadores e cavernas.
+
+O teto de serviço da aeronave é de 25000ft, 
+enquanto a cabine é pressurizada a 6000ft, 
+conforme definido na \autoref{sec:sys_press}. 
+Considerando atmosfera padrão (ISA) a diferença de pressão é de 44kPa.
+
+O material do revestimento foi escolhido como alumínio 2024-T3, devido à sua boa resistência a corrosão, a impactos e estrutural.
+Por isso ele é de emprego comum na indústria aeronáutica para revestimentos.
+O limite de elasticidade desse material é de 290MPa.
+Considerando um fator de segurança para o material de 1,15, o limite de escoamento fica $\sigma_y = 252\text{MPa}$.
+
+Para um vaso de pressão cilindrico, temos
+\begin{align}
+\sigma_\text{long} &= \frac{pr}{2t} \\
+\sigma_\theta      &= \frac{pr}{t}
+\end{align}
+
+O esforço na direção $\theta$ é claramente o dimensionante, portanto, considerando um fator de projeto de 1,5:
+\begin{equation}
+    t = \frac{pd}{2\sigma_y} = \frac{1,5 \cdot 44\si{kPa} \cdot 2070\si{mm}}{2 \cdot 252\si{MPa}} = 0,27\si{mm}
+\end{equation}
+
+Para aumentar a resistência a impactos e a facilidade de fabricação, a espessura do revestimento foi aumentada para $2\si{mm}$.
+
+
+
